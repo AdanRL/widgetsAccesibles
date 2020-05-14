@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="./index.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="css/index.css"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <!--Acordeón -->
+    <ul class="collapsible">
+      <li>
+        <button
+          id="desple1"
+          class="collapsible-header"
+          aria-expanded="false"
+          aria-controls="d1"
+          onclick="toggleAriaExpanded(desple1)"
+        >
+          <i class="material-icons">filter_drama</i>First
+        </button>
+        <div id="d1" class="collapsible-body">
+          <span>Lorem ipsum dolor sit amet.</span>
+        </div>
+      </li>
+      <li>
+        <button
+          id="desple2"
+          class="collapsible-header"
+          aria-expanded="false"
+          aria-controls="d2"
+          onclick="toggleAriaExpanded(desple2)"
+        >
+          <i class="material-icons">place</i>Second
+        </button>
+        <div id="d2" class="collapsible-body">
+          <span>Lorem ipsum dolor sit amet.</span>
+        </div>
+      </li>
+      <li>
+        <button
+          id="desple3"
+          class="collapsible-header"
+          aria-expanded="false"
+          aria-controls="d3"
+          onclick="toggleAriaExpanded(desple3)"
+        >
+          <i class="material-icons">whatshot</i>Third
+        </button>
+        <div id="d3" class="collapsible-body">
+          <span>Lorem ipsum dolor sit amet.</span>
+        </div>
+      </li>
+    </ul>
+
+    <!--Breadcrumps -->
+    <nav aria-label="breadcrumb" class="nav-wrapper">
+      <ol>
+        <a href="#!" class="breadcrumb"> First</a>
+        <a href="#!" class="breadcrumb"> Second</a>
+        <a href="#!" aria-current="location" class="breadcrumb"> Actual Page</a>
+      </ol>
+    </nav>
+    
+    <br>
+
+    <!--Carrusel -->
+
+    <div
+      id="Carrusel"
+      class="carousel"
+      data-ride="carousel"
+      aria-live="polite"
+      duration="10"
+      indicators="true"
+    >
+      <div>
+        <ol class="carousel-indicators" aria-hidden="true">
+          <a
+            data-target="#Carrusel"
+            data-slide-to="#im0"
+            class="active"
+            tabindex="0"
+            aria-label="Mostrar Imagen 1"
+            onclick="cambiarDeImagen(im0)"
+            >1</a
+          >
+          <a
+            data-target="#Carrusel"
+            data-slide-to="#im1"
+            class
+            tabindex="0"
+            aria-label="Mostrar Imagen 2"
+            onclick="cambiarDeImagen(im1)"
+            >2</a
+          >
+          <a
+            data-target="#Carrusel"
+            data-slide-to="#im2"
+            class
+            tabindex="0"
+            aria-label="Mostrar Imagen 3"
+            onclick="cambiarDeImagen(im2)"
+            >3</a
+          >
+          <a class="play-pause" tabindex="0"
+            ><img
+              alt="play"
+              title="play"
+              src="http://www.aena.es/img/aena/carrusel_play.png"
+              onclick=""
+              aria-label="Play"
+          /></a>
+        </ol>
+
+        <div class="carrusel-inner" aria-live="off">
+          <div id="im0" class="carousel-item" aria-hidden="">
+            <a href="#one!"
+              ><img
+                class="d-block w-100"
+                src="https://lorempixel.com/250/250/nature/1"
+            /></a>
+          </div>
+
+          <div id="im1" class="carousel-item" aria-hidden="true">
+            <a class="d-block w-100" href="#two!"
+              ><img
+                class="d-block w-100"
+                src="https://lorempixel.com/250/250/nature/2"
+            /></a>
+          </div>
+
+          <div id="im2" class="carousel-item" aria-hidden="true">
+            <a href="#three!"
+              ><img
+                class="d-block w-100"
+                src="https://lorempixel.com/250/250/nature/3"
+            /></a>
+          </div>
+
+          <div id="im3" class="carousel-item" aria-hidden="true">
+            <a class="carousel-item" href="#four!"
+              ><img
+                class="d-block w-100"
+                src="https://lorempixel.com/250/250/nature/4"
+            /></a>
+          </div>
+        </div>
+
+        <div class=""></div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        <!-----<div>
+      <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+      <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+      <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+      <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+      <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+      </div>
+    </div> --->
+      </div>
+    </div>
+  </body>
+</html>
